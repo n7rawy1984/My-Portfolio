@@ -216,7 +216,7 @@
   }
 
   .achievement-card {
-    @apply glass-card p-6 rounded-xl hover:border-primary/40 group cursor-pointer;
+    @apply glass-card p-6 rounded-xl hover:border-primary/40 cursor-pointer;
     transition: var(--transition-smooth);
   }
 

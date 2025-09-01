@@ -115,7 +115,7 @@ export const AboutSection = () => {
                 return (
                   <div
                     key={index}
-                    className="achievement-card"
+                    className="achievement-card group"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex items-start gap-4">
