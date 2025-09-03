@@ -15,7 +15,6 @@ export const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [closing, setClosing] = useState(false);
-  const [language, setLanguage] = useState<"en" | "ar">("en");
 
   useEffect(() => {
     setIsVisible(true);
@@ -58,73 +57,40 @@ export const HeroSection = () => {
 
   return (
     <>
-      <section
-        dir={language === "ar" ? "rtl" : "ltr"}
-        className="pb-5 pt-5 min-h-screen relative flex items-center justify-center overflow-hidden"
-      >
+      <section className="pb-5 pt-5 min-h-screen relative flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero opacity-20" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-start lg:items-center">
-            {/* Text Column */}
+            {/* Text Content */}
             <div
               className={`space-y-8 ${
                 isVisible ? "animate-fade-in-up" : "opacity-0"
               }`}
             >
-              {/* Language Switcher */}
-              <div className="flex justify-end">
-                <button
-                  onClick={() =>
-                    setLanguage((lang) => (lang === "en" ? "ar" : "en"))
-                  }
-                  className="px-4 py-2 text-sm font-medium text-primary border border-primary/30 rounded hover:bg-primary/10 transition"
-                >
-                  {language === "en" ? "العربية" : "English"}
-                </button>
-              </div>
-
-              {/* Headline & Tagline */}
               <div className="space-y-2">
                 <h1 className="font-display text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="gradient-text">MOHAMED ELNAHRAWY</span>
                   <br />
                   <span className="text-foreground">
-                    {language === "en"
-                      ? "Marketing Strategist & Creative Consultant"
-                      : "خبير تسويق رقمي ومستشار إبداعي"}
+                    Marketing Strategist & Creative Consultant
                   </span>
                 </h1>
                 <div className="h-1 w-32 bg-gradient-primary rounded-full" />
                 <p className="text-xl lg:text-2xl text-muted-foreground font-light">
-                  {language === "en"
-                    ? "Helping brands grow through "
-                    : "أساعد العلامات التجارية على النمو من خلال "}
-                  <span className="text-primary">
-                    {language === "en"
-                      ? "cinematic content"
-                      : "المحتوى السينمائي"}
-                  </span>
-                  ,{" "}
-                  <span className="text-primary">
-                    {language === "en" ? "targeted ads" : "الإعلانات المستهدفة"}
-                  </span>
-                  ,{" "}
-                  <span className="text-primary">
-                    {language === "en"
-                      ? "data-driven strategy"
-                      : "والاستراتيجيات المبنية على البيانات"}
-                  </span>
-                  .
+                  Helping brands grow through{" "}
+                  <span className="text-primary">cinematic content</span>,
+                  <span className="text-primary">targeted ads</span>, and
+                  <span className="text-primary">data-driven strategy</span>.
                 </p>
               </div>
 
-              {/* Description & Contacts */}
               <div className="space-y-4">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  {language === "en"
-                    ? "I craft compelling brand stories, design high-converting landing pages, and launch ad campaigns that speak directly to your audience. Specialized in GCC markets, dropshipping, and e-commerce growth."
-                    : "أبتكر قصص علامات تجارية جذابة، أصمم صفحات هبوط عالية التحويل، وأطلق حملات إعلانية تتحدث مباشرةً إلى جمهورك. متخصص في أسواق الخليج، الدروبشيبينج، ونمو التجارة الإلكترونية."}
+                  I craft compelling brand stories, design high-converting
+                  landing pages, and launch ad campaigns that speak directly to
+                  your audience. Specialized in GCC markets, dropshipping, and
+                  e-commerce growth.
                 </p>
 
                 <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
@@ -143,18 +109,17 @@ export const HeroSection = () => {
                 </div>
               </div>
 
-              {/* View Projects Button */}
               <div className="flex justify-center mt-2">
                 <button
                   onClick={() => setShowProjects(true)}
                   className="px-8 py-4 font-semibold text-primary border-2 border-primary/30 rounded-lg hover:border-primary hover:bg-primary/10 transition-all duration-300"
                 >
-                  {language === "en" ? "View Projects" : "عرض المشاريع"}
+                  View Projects
                 </button>
               </div>
             </div>
 
-            {/* Image Column */}
+            {/* Image */}
             <div
               className={`relative ${
                 isVisible ? "animate-slide-in-right" : "opacity-0"
@@ -202,9 +167,7 @@ export const HeroSection = () => {
                 {/* Wisdom Quote */}
                 <div className="mt-6 mx-auto max-w-md glass-card p-4 rounded-xl text-center">
                   <p className="text-primary text-xl lg:text-2xl font-serif italic tracking-wide">
-                    {language === "en"
-                      ? "Conviction creates reality."
-                      : "الإقتناع بالشئ يوجده"}
+                    Conviction creates reality
                   </p>
                 </div>
               </div>
