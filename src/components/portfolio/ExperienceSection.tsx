@@ -161,9 +161,12 @@ export const ExperienceSection = () => {
                         </div>
                       </div>
                       
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium border ${typeColors[exp.type as keyof typeof typeColors]}`}>
-                        {exp.type}
-                      </span>
+                      <div className="flex w-full lg:w-auto justify-center lg:justify-start order-2 lg:order-none">
+  <span className={`px-3 py-1 rounded-full text-xs font-medium border ${typeColors[exp.type as keyof typeof typeColors]}`}>
+    {exp.type}
+  </span>
+</div>
+
                     </div>
 
                     {/* Meta info */}
